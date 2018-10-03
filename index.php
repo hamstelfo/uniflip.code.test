@@ -1,11 +1,25 @@
+
+<?php 
+    ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+    $from = "emailtest@YOURDOMAIN";
+    $to = "rpeinado@asystem.es";
+    $subject = "PHP Mail Test script";
+    $message = "This is a test to check the PHP Mail functionality";
+    $headers = "From:" . $from;
+    mail($to,$subject,$message, $headers);
+    echo "Test email sent";
+?>
+
 <?
-die("pipi");
+
+//die("pipi");
 error_reporting(E_ALL);
 ini_set('display_errors',	1);
 $path_log= __DIR__ . '/' . 'log.log';
 ini_set('error_log', $path_log);
 
-print_r($path_log);
+pinta($path_log);
 
 //$po= 4/0; echo "(($po))"; // dsdfsd
 
@@ -18,6 +32,8 @@ $headers= 'From: popo@uniflip.dev' . "\r\n" .
 
 $result= mail($to, $subject, $message, $headers);
 
+pinta($result);
+
 if (!$result)
 {
 	print_r(error_get_last());
@@ -28,6 +44,16 @@ else
 	die("success!!");
 }
 
-echo "mail result: (($result))";
 
+function pinta($data, $end= false)
+{
+	echo "<pre>";
+	print_r($data);
+	echo "</pre>";
+
+	if ($end)
+	{
+		die();
+	}
+}
 ?>
