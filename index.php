@@ -1,16 +1,3 @@
-
-<?php 
-    ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
-    $from = "emailtest@asystem.es";
-    $to = "rpeinado@asystem.es";
-    $subject = "PHP Mail Test script";
-    $message = "This is a test to check the PHP Mail functionality";
-    $headers = "From:" . $from;
-    mail($to,$subject,$message, $headers);
-    echo "Test email sent";
-?>
-
 <?
 
 //die("pipi");
@@ -24,10 +11,10 @@ pinta($path_log);
 //$po= 4/0; echo "(($po))"; // dsdfsd
 
 $to= 'rpeinado@asystem.es';
-$subject= 'asunto';
-$message= 'lets get outta here madafaca';
-$headers= 'From: popo@uniflip.dev' . "\r\n" .
-		  'Reply-To: popo@pipi.com' . "\r\n" .
+$subject= 'the subject';
+$message= 'the test message';
+$headers= 'From: uniflip@uniflip.com' . "\r\n" .
+		  'Reply-To: uniflip@uniflip.com' . "\r\n" .
 		  'X-Mailer: PHP/' . phpversion();
 
 $result= mail($to, $subject, $message, $headers);
@@ -37,7 +24,7 @@ pinta($result);
 if (!$result)
 {
 	print_r(error_get_last());
-	die("very bad!!");
+	die("not sent!!");
 }
 else
 {
