@@ -2,7 +2,7 @@
 <?php 
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
-    $from = "emailtest@YOURDOMAIN";
+    $from = "emailtest@asystem.es";
     $to = "rpeinado@asystem.es";
     $subject = "PHP Mail Test script";
     $message = "This is a test to check the PHP Mail functionality";
