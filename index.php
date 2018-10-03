@@ -3,10 +3,9 @@
 //die("pipi");
 error_reporting(E_ALL);
 ini_set('display_errors',	1);
-$path_log= __DIR__ . '/' . 'log.log';
-ini_set('error_log', $path_log);
-
-pinta($path_log);
+//$path_log= __DIR__ . '/' . 'log.log';
+//ini_set('error_log', $path_log);
+//pinta($path_log);
 
 //$po= 4/0; echo "(($po))"; // dsdfsd
 
